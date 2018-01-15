@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Birds</title>
+  </head>
+  <body>
+    <h1>All Birds</h1>
+
+    <!-- New Bird Form -->
+    <form id="newBirdForm" action="/birds" method="post">
+      <div>
+        <input id="title" type="text" name="title"/>
+      </div>
+      <div>
+        <textarea id="description" name="description" rows="8" cols="80"></textarea>
+      </div>
+
+      <button>Save</button>
+    </form>
+
+    <div id="birds">
+      <% birds.forEach((bird) => { %>
+        <div>
+          <h2> <%= bird.title %> </h2>
+          <p> <%= bird.description %> </p>
+        </div>
+      <% }); %>
+    </div>
+  </body>
+  <!-- SiteJS -->
+  <script src="/javascripts/site.js" charset="utf-8"></script>
+</html>
